@@ -1,0 +1,50 @@
+Task: File Upload Management System with Factory Method.
+
+
+Objective:
+To develop a Django project that provides file upload services through DRF endpoints and
+manages file metadata using a factory method.
+
+
+Requirements:
+    Django project setup with Django Rest Framework installed.
+    User authentication and authorization for file upload endpoints.
+    Endpoints for uploading files, retrieving file metadata, and deleting files.
+    Implementation of a factory method pattern for storing file metadata.
+    Support for different file storage backends (local file system).
+
+
+Tasks:
+    Project Setup:
+        Create a new Django project and app using the django-admin command.
+        Install Django Rest Framework and configure it in the project settings.
+
+    User Authentication:
+        Implement user authentication using Django's built-in authentication system or 
+        third-party packages like django-allauth or django-rest-auth.
+        Set up token-based authentication for DRF endpoints to secure file upload operations.
+
+    File Upload Endpoints:
+        Create DRF viewsets and serializers for handling file upload operations.
+        Define endpoints for uploading files, retrieving file metadata, and deleting files.
+        Implement permission classes to restrict access to these endpoints based on 
+        user roles (e.g., admin, authenticated user).
+
+    Factory Method for File Metadata:
+        Design a factory method pattern for generating file metadata objects.
+        Implement a base class and concrete subclasses for different types of file 
+        metadata (e.g., image metadata, document metadata).
+        Define methods for extracting metadata from uploaded files and storing them in 
+        the database.
+
+    File Storage Backend:
+        Configure Django's file storage settings to support different storage backends 
+        (e.g., local file system, Amazon S3, Google Cloud Storage).
+        Implement file storage classes for each backend and integrate them with the file upload endpoints.
+
+    Testing and Validation:
+        Write unit tests for the file upload endpoints, serializers, and factory method classes.
+        Test the system with sample files of different types and sizes to ensure proper 
+        handling and storage of file metadata.
+        Perform validation checks for uploaded files (e.g., file size limits, allowed 
+        file types) and handle validation errors gracefully.
