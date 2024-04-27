@@ -30,7 +30,9 @@ class Uploading_Files:
 
 #=======================================================================
 def upload_to(instance, filename):
-    return f"uploaded_files/{instance.user.first_name}_{instance.user.last_name}/{filename}"
+    file_name, ext = os.path.splitext(filename)
+    new_filename = f"{uuid4()}{ext}"
+    return f"uploaded_files/{instance.user.first_name}_{instance.user.last_name}/{new_filename}"
 
 
 #=======================================================================
@@ -43,7 +45,6 @@ def Sending_Mail(Subject,Message,HTML_Content,To):
     
 #=======================================================================
 def generating_random_code(count):
-
     count -= 1
     generator = randint(10**count, 10**(count + 1)-1)
     return generator

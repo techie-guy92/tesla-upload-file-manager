@@ -6,7 +6,7 @@ class UploadFileSerializer(serializers.ModelSerializer):
     class Meta:
         model = UploadFileModel
         fields = "__all__"  
-    
+       
     def validate(self, data):
         file = data.get("file")
         metadata = data.get("metadata")
