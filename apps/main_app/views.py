@@ -96,7 +96,9 @@ class Download_File_View(APIView):
                     return response
                 else:
                     return Response({'error': 'You are not allowed'}, status=status.HTTP_403_FORBIDDEN)
-                
+            else:
+                    return Response({'error': 'File Not exist any more'}, status=status.HTTP_404_NOT_FOUND)
+                    
         except FileNotFoundError:
                 return Response({'error': 'File not found'}, status=status.HTTP_404_NOT_FOUND)
 
